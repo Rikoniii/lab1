@@ -1,0 +1,22 @@
+import random
+
+def generate_password(length=12, include_uppercase=True, include_numbers=True, include_symbols=True):
+ """Генерирует случайный пароль заданной длины с опциональными параметрами."""
+ characters = "abcdefghijklmnopqrstuvwxyz"
+ if include_uppercase:
+  characters += "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+ if include_numbers:
+  characters += "0123456789"
+ if include_symbols:
+  characters += "!@#$%^&*()"
+
+ password = "".join(random.sample(characters, length))
+ return password
+
+password_length = int(input("Введите желаемую длину пароля: "))
+include_uppercase = input("Включить заглавные буквы? (да/нет): ").lower() == "да"
+include_numbers = input("Включить цифры? (да/нет): ").lower() == "да"
+include_symbols = input("Включить символы? (да/нет): ").lower() == "да"
+
+password = generate_password(password_length, include_uppercase, include_numbers, include_symbols)
+print(f"Сгенерированный пароль: {password}")
