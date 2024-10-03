@@ -1,0 +1,19 @@
+import turtle
+
+# Создаем объект черепахи
+screen = turtle.Screen()
+screen.bgcolor("skyblue") # Устанавливаем фон неба
+
+# Создаем солнце
+sun = turtle.Turtle()
+sun.speed(0) # Максимальная скорость
+sun.penup()
+sun.goto(0, 100) # Перемещаем солнце в центр
+sun.pendown()
+sun.color("yellow") # Задаем цвет солнца
+sun.begin_fill() # Начинаем заливку
+sun.circle(50) # Рисуем круг
+sun.end_fill() # Заканчиваем заливку
+
+# Завершаем работу
+turtle.done()
