@@ -1,0 +1,10 @@
+class Teacher:
+    def __init__(self, name, subject):
+        self.name = name
+        self.subject = subject
+
+    def introduce(self):
+        return f"Здравствуйте! Я {self.name}, преподаватель {self.subject}."
+
+arkadiy = Teacher("Аркадий", "информатики")
+print(arkadiy.introduce())
